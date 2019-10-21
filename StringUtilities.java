@@ -57,9 +57,12 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
-      StringBuilder newStr = new StringBuilder(value);
-      newStr.deleteCharAt(charToRemove);
-        return newStr.toString();
+      //StringBuilder newStr = new StringBuilder(value);
+      //newStr.deleteCharAt(charToRemove);
+      //  return newStr.toString();
+      
+      String newStr = value.replace(charToRemove.toString(), "");
+      return newStr;
 }
 
     /**
