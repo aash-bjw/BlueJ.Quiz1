@@ -37,18 +37,9 @@ public class StringUtilities {
      * @return middle character of `word`
      */
     public Character getMiddleCharacter(String word) {
-        int position;
-        int length;
-       
-        if(word.length() % 2 == 0){
-            position = word.length() / 2-1;
-            length = 2;
-        } else { 
-            position = word.length() / 2;
-            length = 1;
-        }        
-        String result = word.substring(position, position + length);
-        return null;
+        StringBuilder sb = new StringBuilder(word);
+        Character c = sb.charAt(word.length()/2);
+        return c;
     }
 
     /**
